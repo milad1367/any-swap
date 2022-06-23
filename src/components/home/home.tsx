@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ethers } from "ethers";
+import { Swapper } from "../swapper";
 
 function Home() {
   const [data, setData] = useState({
@@ -73,6 +74,7 @@ function Home() {
       {!data.address && !data.balance && (
         <button onClick={btnHandler}>Connect to wallet</button>
       )}
+      <Swapper />
     </div>
   );
 }
